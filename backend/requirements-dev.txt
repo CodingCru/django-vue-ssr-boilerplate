@@ -3,4 +3,7 @@ black
 ruff
 mypy
 django-stubs
+djangorestframework-stubs
+pre-commit
+types-requests
 pre-commit

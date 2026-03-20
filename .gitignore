@@ -20,7 +20,6 @@ package-lock.json
 
 # OS
 .DS_Store
-.vscode
 
 # Docker
 *.pid
