@@ -23,22 +23,24 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.12'
           cache: 'pip'
-          cache-dependency-path: backend/requirements.txt
+          cache-dependency-path: |
+            backend/requirements.txt
+            backend/requirements-dev.txt
 
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
           pip install -r backend/requirements-dev.txt
 
-      - name: ruff
+      - name: ruff format
+        working-directory: backend
+        run: ruff format --check .
+
+      - name: ruff check
         working-directory: backend
         run: ruff check .
-
-      - name: black --check
-        working-directory: backend
-        run: black --check .
 
       - name: mypy
         run: mypy .

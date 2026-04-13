@@ -8,7 +8,6 @@ repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.11.6
     hooks:
-      # Format (replaces black)
       - id: ruff-format
         exclude: '^.*/migrations/.*'
       # Auto-fix ONLY imports; don't fail after fixing
