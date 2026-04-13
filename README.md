@@ -12,12 +12,15 @@ A minimal full-stack boilerplate with Django REST API backend and Nuxt 3 fronten
 
 ## Quick Start
 
+```bash
+direnv allow  # auto-activates the venv when you cd into the project
+scripts/bootstrap_local.sh
+```
+
 **Backend:**
 
 ```bash
 cd backend
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt -r requirements-dev.txt
 python manage.py runserver
 ```
 
