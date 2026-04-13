@@ -1,7 +1,3 @@
-[tool.black]
-line-length = 88
-target-version = ["py312"]
-
 [tool.ruff]
 line-length = 88
 target-version = "py312"
@@ -14,6 +10,9 @@ ignore = ["E501"]
 [tool.ruff.lint.isort]
 known-first-party = ["config"]
 combine-as-imports = true
+
+[tool.ruff.format]
+exclude = ["**/migrations/*.py"]
 
 
 [tool.mypy]
