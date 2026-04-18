@@ -58,3 +58,20 @@ Based on experience — follow these steps to avoid losing hours on tooling.
 1. Install extension **[Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)**
 2. Install extension **[Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)**
 3. Create `.vscode/settings.json` in the root — it's already included in this repo. If the interpreter path doesn't resolve, update it manually to your local `.venv` path.
+
+## Startup with Docker
+### Prerequisites:
+- Docker
+- Docker compose (either plugin or standalone version)
+- Git
+
+### Quick start
+To get app running follow 3 easy steps:
+```bash
+git clone https://github.com/CodingCru/django-nuxt-ssr-boilerplate.git
+cd django-nuxt-ssr-boilerplate
+docker compose up -d
+```
+Note: First build may take 3-5 minutes depending on your connection. If build gets stuck (common with pnpm) - cancel and rebuild.
+
+Don't forget to replace postgres pass in production.
