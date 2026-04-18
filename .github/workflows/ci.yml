@@ -44,3 +44,9 @@ jobs:
 
       - name: mypy
         run: mypy .
+
+      - name: Check for missing migrations
+        working-directory: backend
+        run: python manage.py makemigrations --check --dry-run
+        env:
+          DJANGO_SETTINGS_MODULE: config.settings.dev
